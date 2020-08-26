@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/Users/gb/dotfiles/vim'
+let g:netrw_dirhist_4='/Users/gb/Sandbox/GIT/LAB/send-mail-beta-testing/beta-emails/mvc/model'
+let g:netrw_dirhist_3='/Users/gb/Sandbox/GIT/LAB/send-mail-beta-testing/beta-emails/mvc/view/html/assets/css/custom'
+let g:netrw_dirhist_2='/Users/gb/Sandbox/GIT/HUB/suse-best-practices/.git'
+let g:netrw_dirhist_1='/Users/gb/Downloads/etc/dhcp/dhclient-exit-hooks.d'

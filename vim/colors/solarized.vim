@@ -1,0 +1,1 @@
+/Users/gb/Sandbox/GIT/HUB/solarized/vim-colors-solarized/colors/solarized.vim
