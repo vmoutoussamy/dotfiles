@@ -1,38 +1,20 @@
+" ================ General Config ====================
 scriptencoding utf-8
 set encoding=utf-8
-
-" Use Vim settings, rather then Vi settings (much better!).
-set nocompatible
-
-" Show matching brackets.
-set showmatch
-
-" Enable mouse usage (all modes)
-set mouse=a
-
-" filetype detection, indent and plugin ON
-filetype indent plugin on
-
-" ================ General Config ====================
-
-set number                      "Line numbers are good
-set backspace=indent,eol,start  "Allow backspace in insert mode
-set history=1000                "Store lots of :cmdline history
-set showcmd                     "Show incomplete cmds down the bottom
-set showmode                    "Show current mode down the bottom
-set gcr=a:blinkon0              "Disable cursor blink
-set visualbell                  "No sounds
-set autoread                    "Reload files changed outside vim
-set colorcolumn=100              "was 80 but now 100 characters line lengh marker"
-
-" This makes vim act like all other editors, buffers can
-" exist in the background without being in a window.
-" http://items.sjbach.com/319/configuring-vim-right
-set hidden
-
-" turn on Highlighting search matches, highlight as you type
-set hlsearch
-set incsearch
+set nocompatible                " Use Vim settings, rather then Vi settings
+set showmatch                   " Show matching brackets.
+set mouse=a                     " Enable mouse usage (all modes)
+filetype indent plugin on       " filetype detection, indent and plugin ON
+set number                      " Line numbers are good
+set backspace=indent,eol,start  " Allow backspace in insert mode
+set history=1000                " Store lots of :cmdline history
+set showcmd                     " Show incomplete cmds down the bottom
+set showmode                    " Show current mode down the bottom
+set gcr=a:blinkon0              " Disable cursor blink
+set visualbell                  " No sounds
+set autoread                    " Reload files changed outside vim
+set colorcolumn=100             " was 80 but now 100 characters line lengh marker"
+set hidden                      " You can have unwritten changes to a file and still open a new file
 
 " Set the title of the Terminal to the currently open file
 set title
@@ -47,13 +29,15 @@ function! SetTerminalTitle()
         redraw!
     endif
 endfunction
-
 autocmd BufEnter * call SetTerminalTitle()
 
 " Incremental search that shows partial matches.
 " Automatically switch search to case-sensitive when search query contains an uppercase letter.
 set ignorecase
 set smartcase
+" turn on Highlighting search matches, highlight as you type
+set hlsearch
+set incsearch
 
 " ================ Indentation ======================
 
