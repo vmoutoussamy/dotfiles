@@ -4,7 +4,6 @@ set encoding=utf-8
 set nocompatible                " Use Vim settings, rather then Vi settings
 set showmatch                   " Show matching brackets.
 set mouse=a                     " Enable mouse usage (all modes)
-filetype indent plugin on       " filetype detection, indent and plugin ON
 set number                      " Line numbers are good
 set backspace=indent,eol,start  " Allow backspace in insert mode
 set history=1000                " Store lots of :cmdline history
@@ -13,8 +12,9 @@ set showmode                    " Show current mode down the bottom
 set gcr=a:blinkon0              " Disable cursor blink
 set visualbell                  " No sounds
 set autoread                    " Reload files changed outside vim
-set colorcolumn=100             " was 80 but now 100 characters line lengh marker"
+set colorcolumn=100             " Default 80 but now 100 characters line lengh marker
 set hidden                      " You can have unwritten changes to a file and still open a new file
+filetype plugin on
 
 " Set the title of the Terminal to the currently open file
 set title
@@ -31,32 +31,32 @@ function! SetTerminalTitle()
 endfunction
 autocmd BufEnter * call SetTerminalTitle()
 
-" Incremental search that shows partial matches.
-" Automatically switch search to case-sensitive when search query contains an uppercase letter.
-set ignorecase
-set smartcase
-" turn on Highlighting search matches, highlight as you type
-set hlsearch
-set incsearch
+" ====================== Search ======================
+
+set ignorecase                   " Case insensitive search
+set smartcase                    " Auto switch search to case-sensitive when query contains uppercase
+set hlsearch                     " Turn on Highlighting search matches, highlight as you type
+set incsearch                    " See search results as you start typing the search word
 
 " ================ Indentation ======================
-
-" copy the indentation from the previous line, does not interfere with other
-" indentation settings
-set autoindent
-set smartindent
-set smarttab
-
+" https://tedlogan.com/techblog3.html
+set autoindent                  " New lines inherit the indentation of previous lines.
+set smartindent                 " Automatically inserts one extra level of indentation in some cases
 " Indentation with space softtab, pressing <TAB> will create space
-set expandtab
-set shiftwidth=2
-set softtabstop=2
-set shiftround
+set softtabstop=2               " Control how many columns used when you hit Tab in insert mode
+set expandtab                   " Pressing <TAB> produces spaces
+set shiftwidth=2                " When shifting, indent using two spaces.
+set shiftround                  " When shifting lines, round the indentation to the nearest multiple of “shiftwidth.”
+set smarttab                    " Insert “tabstop” number of spaces when the “tab” key is pressed
 
-set wrap       "Wrap lines
-set linebreak    "Wrap lines at convenient points
+" =============== Text Rendering ===============
+
+syntax enable
+set wrap                        " Enable line wrapping.
+set linebreak                   " Avoid wrapping a line in the middle of a word.
 
 " =============== Spaces ===========================
+
 " Display tabs and trailing spaces visually
 set list listchars=tab:»·,trail:•,precedes:<,extends:>
 " Show trailing whitepace and spaces before a tab in red:
@@ -88,7 +88,6 @@ set sidescroll=1
 
 " ================ Color theme ========================
 " Color theme (drawing from altercation/vim-colors-solarized Bundle)
-syntax enable
 set background=light
 "force default colorscheme to avoid issue with remote servers
 colorscheme default
