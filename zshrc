@@ -1,4 +1,4 @@
-# Version 1.3.19 2020-08-19
+# Version 1.3.20 2020-09-08
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -51,6 +51,7 @@ case $_myos in
     alias sshMacMini='ssh gb@macmini'
     alias reloadDNSmasq='sudo launchctl stop homebrew.mxcl.dnsmasq && sudo launchctl start homebrew.mxcl.dnsmasq'
     alias config='/usr/bin/git --git-dir=/Users/gb/.cfg/ --work-tree=/Users/gb'
+    alias TextEdit='open -a TextEdit'
   ;;
    *) ;;
 esac
