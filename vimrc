@@ -32,7 +32,6 @@ endfunction
 autocmd BufEnter * call SetTerminalTitle()
 
 " ====================== Search ======================
-
 set ignorecase                   " Case insensitive search
 set smartcase                    " Auto switch search to case-sensitive when query contains uppercase
 set hlsearch                     " Turn on Highlighting search matches, highlight as you type
@@ -50,13 +49,11 @@ set shiftround                  " When shifting lines, round the indentation to 
 set smarttab                    " Insert “tabstop” number of spaces when the “tab” key is pressed
 
 " =============== Text Rendering ===============
-
 syntax enable
 set wrap                        " Enable line wrapping.
 set linebreak                   " Avoid wrapping a line in the middle of a word.
 
 " =============== Spaces ===========================
-
 " Display tabs and trailing spaces visually
 set list listchars=tab:»·,trail:•,precedes:<,extends:>
 " Show trailing whitepace and spaces before a tab in red:
@@ -66,7 +63,6 @@ match ExtraWhitespace /\s\+\%#\@<!$/
 
 
 " ================ Completion =======================
-
 set wildmode=list:longest
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
@@ -81,7 +77,6 @@ set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
 " ================ Scrolling ========================
-
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
@@ -117,6 +112,7 @@ nmap <D-4> g$
 nmap <D-6> g^
 nmap <D-0> g^
 
+" ================ Misc ================
 " Simple re-format for minified Javascript
 command! UnMinify call UnMinify()
 function! UnMinify()
