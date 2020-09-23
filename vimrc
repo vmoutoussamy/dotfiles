@@ -113,17 +113,6 @@ nmap <D-6> g^
 nmap <D-0> g^
 
 " ================ Misc ================
-" Simple re-format for minified Javascript
-command! UnMinify call UnMinify()
-function! UnMinify()
-    %s/{\ze[^\r\n]/{\r/g
-    %s/){/) {/g
-    %s/};\?\ze[^\r\n]/\0\r/g
-    %s/;\ze[^\r\n]/;\r/g
-    %s/[^\s]\zs[=&|]\+\ze[^\s]/ \0 /g
-    normal ggVG=
-endfunction
-
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
