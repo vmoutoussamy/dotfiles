@@ -52,6 +52,7 @@ case $_myos in
     alias reloadDNSmasq='sudo launchctl stop homebrew.mxcl.dnsmasq && sudo launchctl start homebrew.mxcl.dnsmasq'
     alias config='/usr/bin/git --git-dir=/Users/gb/.cfg/ --work-tree=/Users/gb'
     alias TextEdit='open -a TextEdit'
+    alias send_mail='/Users/gb/Sandbox/GIT/LAB/send-mail-beta/mvc/controller/send_mail.rb'
   ;;
    *) ;;
 esac

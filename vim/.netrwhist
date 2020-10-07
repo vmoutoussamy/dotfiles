@@ -1,9 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/usr/local/etc'
+let g:netrw_dirhist_1='/Users/gb/Sandbox/GIT/HUB/kiwi-descriptions/suse/x86_64/suse-leap-15.1/root/etc'
+let g:netrw_dirhist_0='/Users/gb/Sandbox/GIT/HUB/kiwi-descriptions/suse/x86_64/suse-leap-15.1/root'
+let g:netrw_dirhist_9='/Users/gb/Sandbox/GIT/HUB/kiwi-descriptions/suse/x86_64/suse-leap-15.1'
+let g:netrw_dirhist_8='/Users/gb/Sandbox/GIT/HUB/kiwi-descriptions/suse/armv7l/suse-tumbleweed-panda'
 let g:netrw_dirhist_7='/Users/gb/dotfiles/vim'
 let g:netrw_dirhist_6='/Users/gb/dotfiles/.git'
 let g:netrw_dirhist_5='/Users/gb/dotfiles/vim'
 let g:netrw_dirhist_4='/Users/gb/Sandbox/GIT/LAB/send-mail-beta-testing/beta-emails/mvc/model'
 let g:netrw_dirhist_3='/Users/gb/Sandbox/GIT/LAB/send-mail-beta-testing/beta-emails/mvc/view/html/assets/css/custom'
-let g:netrw_dirhist_2='/Users/gb/Sandbox/GIT/HUB/suse-best-practices/.git'
-let g:netrw_dirhist_1='/Users/gb/Downloads/etc/dhcp/dhclient-exit-hooks.d'
