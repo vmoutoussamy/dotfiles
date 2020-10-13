@@ -114,6 +114,8 @@ nmap <D-0> g^
 
 " ================ Misc ================
 call plug#begin('~/.vim/plugged')
-Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline' " status/tabline https://github.com/vim-airline/vim-airline
 Plug 'vim-airline/vim-airline-themes'
+Plug 'ap/vim-css-color'   " displays preview of colors with CSS https://github.com/ap/vim-css-color
 call plug#end()
+
