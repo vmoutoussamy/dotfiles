@@ -38,6 +38,8 @@ case $_myos in
     # FIXME: handle arguments to vpnRouteSUSE
     source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
+    # Using Ruby from Homebrew
+    export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
     alias gitlab='cd /Users/gb/Sandbox/GIT/LAB/'
     alias github='cd /Users/gb/Sandbox/GIT/HUB/'
     alias updateBrew='echo "\n ### Update ### \n"; brew -v update && echo "\n ### Upgrade ### \n"; brew upgrade && echo "\n ### Cleanup ### \n"; brew cleanup && echo "\n ### Doctor ### \n"; brew doctor'
