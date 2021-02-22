@@ -43,7 +43,7 @@ case $_myos in
     alias updateBrew='echo "\n ### Update ### \n"; brew -v update && echo "\n ### Upgrade ### \n"; brew upgrade && echo "\n ### Cleanup ### \n"; brew cleanup && echo "\n ### Doctor ### \n"; brew doctor'
     alias flushDNS='dscacheutil -flushcache && sudo killall -HUP mDNSResponder'
     alias rsyncItunesSynology='rsync -avvz --delete --port 5022 /Users/gb/Music/iTunes/iTunes\ Media/Music/* gb@192.168.1.8:/volume1/music/'
-    alias rsyncItunesMini='rsync -avvz /Users/gb/Music/iTunes/iTunes\ Media/Music/* gb@10.0.0.7:/Users/gb/Musique/Music/Media/'
+    alias rsyncItunesMini='rsync -avvz /Users/gb/Music/iTunes/iTunes\ Media/Music/* gb@10.0.0.7:/Users/gb2/Musique/Music/Media/'
     alias firefox-profile='/Applications/Firefox.app/Contents/MacOS/firefox-bin -P'
     alias mountISO='hdiutil mount'
     alias networkConfig='/Users/gb/Sandbox/GIT/HUB/networkconfig/networkconfig.sh'
