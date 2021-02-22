@@ -122,11 +122,6 @@ export EDITOR=vim
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 
-PATH="/Users/gb/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/Users/gb/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/gb/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/gb/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/gb/perl5"; export PERL_MM_OPT;
 #! /bin/zsh
 # A script to make using 256 colors in zsh less painful.
 # P.C. Shyamshankar <sykora@lucentbeing.com>
