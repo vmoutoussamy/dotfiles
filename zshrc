@@ -121,7 +121,6 @@ plugins=(git)
 # Customize to your needs...
 export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin
 export EDITOR=vim
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 
 #! /bin/zsh
@@ -162,4 +161,3 @@ function spectrum_bls() {
   done
 }
 source $ZSH/oh-my-zsh.sh
-
