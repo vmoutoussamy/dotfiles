@@ -39,6 +39,8 @@ case $_myos in
     source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     # Using openSSL, Ruby from Homebrew
     export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/opt/ruby@2.7/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/sbin/:$PATH"
+    # Using GNU SED instead of macOS sed
+    export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
     # Aliases
     alias gitlab='cd /Users/gb/Sandbox/GIT/LAB/'
     alias github='cd /Users/gb/Sandbox/GIT/HUB/'
