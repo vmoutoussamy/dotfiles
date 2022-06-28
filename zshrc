@@ -1,4 +1,4 @@
-# Version 1.3.20 2020-09-08
+# Version 1.3.21 2022-06-28
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -15,8 +15,15 @@ export LS_COLORS='no=00:fi=00:di=01;32:ln=00;36:pi=40;33:so=01;35:do=01;35:bd=40
 export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
 
-export HISTSIZE=50000
-export SAVEHIST=10000
+# From https://jdhao.github.io/2021/03/24/zsh_history_setup/
+export HISTSIZE=50000 # the number of items for the internal history list
+export SAVEHIST=10000 # maximum number of items for the history file
+
+setopt HIST_IGNORE_ALL_DUPS  # do not put duplicated command into history list
+setopt HIST_SAVE_NO_DUPS  # do not save duplicated command
+setopt HIST_REDUCE_BLANKS  # remove unnecessary blanks
+setopt INC_APPEND_HISTORY_TIME  # append command to history file immediately after execution
+setopt EXTENDED_HISTORY  # record command start time
 
 ### add alias as per os using $_myos ###
 _myos="$(uname)"
@@ -46,8 +53,6 @@ case $_myos in
     alias github='cd /Users/gb/Sandbox/GIT/HUB/'
     alias updateBrew='echo "\n ### Update ### \n"; brew -v update && echo "\n ### Upgrade ### \n"; brew upgrade && echo "\n ### Cleanup ### \n"; brew cleanup && echo "\n ### Doctor ### \n"; brew doctor'
     alias flushDNS='dscacheutil -flushcache && sudo killall -HUP mDNSResponder'
-    alias rsyncItunesSynology='rsync -avvz --delete --port 5022 /Users/gb/Music/iTunes/iTunes\ Media/Music/* gb@192.168.1.8:/volume1/music/'
-    alias rsyncItunesMini='rsync -avvz /Users/gb/Music/iTunes/iTunes\ Media/Music/* gb@10.0.0.7:/Users/gb2/Musique/Music/Media/'
     alias firefox-profile='/Applications/Firefox.app/Contents/MacOS/firefox-bin -P'
     alias mountISO='hdiutil mount'
     alias networkConfig='/Users/gb/Sandbox/GIT/HUB/networkconfig/networkconfig.sh'
@@ -162,3 +167,5 @@ function spectrum_bls() {
   done
 }
 source $ZSH/oh-my-zsh.sh
+
+
