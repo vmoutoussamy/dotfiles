@@ -118,4 +118,3 @@ Plug 'vim-airline/vim-airline' " status/tabline https://github.com/vim-airline/v
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ap/vim-css-color'   " displays preview of colors with CSS https://github.com/ap/vim-css-color
 call plug#end()
-
