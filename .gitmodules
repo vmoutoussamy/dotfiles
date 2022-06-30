@@ -1,3 +1,6 @@
 [submodule "vim/plugged/vim/plugged/vim-css-color"]
 	path = vim/plugged/vim/plugged/vim-css-color
 	url = https://github.com/ap/vim-css-color
+[submodule "vim/pack/git-plugins/start/ale"]
+	path = vim/pack/git-plugins/start/ale
+	url = https://github.com/dense-analysis/ale.git
