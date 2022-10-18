@@ -78,8 +78,8 @@ alias psaux'=ps aux'
 # ssh aliases:
 alias sshEuklid='ssh vmoutoussamy@euklid.suse.de'
 alias sshZiu='ssh vmoutoussamy@ziu.suse.de'
-alias sshMiniouille='ssh miniouille'
-alias sshMinileap154='ssh root@minileap154'
+alias sshMiniouille='ssh gb@miniouille'
+alias sshMinileap154='ssh gb@minileap154'
 
 #System aliases:
 alias history='history -E'
