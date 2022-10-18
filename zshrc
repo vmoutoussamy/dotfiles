@@ -40,6 +40,8 @@ case $_myos in
     alias stats-motd='sh /etc/profile.d/stats-motd.sh'
     alias ssh-git='eval "$(ssh-agent -s)" && ssh-add /home/vm/.ssh/github_rsa'
     alias sshLoginSUSE='ssh -i ~/.ssh/login_rsa vmoutoussamy@login.nue.suse.com'
+    alias sshMiniouille='ssh miniouille'
+    alias sshMinimal-Leap154='ssh minileap154''
   ;;
    Darwin)
     # FIXME: handle arguments to vpnRouteSUSE
