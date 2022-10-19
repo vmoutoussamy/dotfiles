@@ -57,7 +57,6 @@ case $_myos in
     alias mountISO='hdiutil mount'
     alias networkConfig='/Users/gb/Sandbox/GIT/HUB/networkconfig/networkconfig.sh'
     alias sshLoginSUSE='ssh vmoutoussamy@login.nue.suse.com'
-    alias sshMacMini='ssh gb@macmini'
     alias reloadDNSmasq='sudo launchctl stop homebrew.mxcl.dnsmasq && sudo launchctl start homebrew.mxcl.dnsmasq'
     alias config='/usr/bin/git --git-dir=/Users/gb/.cfg/ --work-tree=/Users/gb'
     alias TextEdit='open -a TextEdit'
