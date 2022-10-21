@@ -41,7 +41,7 @@ case $_myos in
     alias ssh-git='eval "$(ssh-agent -s)" && ssh-add /home/vm/.ssh/github_rsa'
     alias sshLoginSUSE='ssh -i ~/.ssh/login_rsa vmoutoussamy@login.nue.suse.com'
     alias startMiniSles154='sudo virsh start Minimal-SLES15.4'
-    alias startMiniLeap154='sudo virsh start Minimal-Leap15.4'
+    alias startMiniLeap154='sudo virsh start Minimal-Leap15.4 && sleep 15 && sshMinileap154'
   ;;
    Darwin)
     # FIXME: handle arguments to vpnRouteSUSE
@@ -81,6 +81,7 @@ alias sshEuklid='ssh vmoutoussamy@euklid.suse.de'
 alias sshZiu='ssh vmoutoussamy@ziu.suse.de'
 alias sshMiniouille='ssh gb@miniouille'
 alias sshMinileap154='ssh gb@minileap154'
+alias sshMiniSles154='ssh gb@minisles154'
 
 #System aliases:
 alias history='history -E'
