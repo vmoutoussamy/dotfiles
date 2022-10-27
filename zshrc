@@ -32,7 +32,7 @@ setopt extended_glob
 
 case $_myos in
   Linux)
-    source /home/gb/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     alias open'=xdg-open'
     alias ps-walkingdead='ps -el | grep Z'
     alias systemctl-list-service='systemctl list-unit-files --type=service'
