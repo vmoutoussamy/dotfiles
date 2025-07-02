@@ -5,7 +5,7 @@ set --export --prepend PATH "/Users/gb/.rd/bin"
 abbr -a -- ga 'git add'
 abbr -a -- gst 'git status'
 abbr -a -- gbr 'git branch'
-abbr -a -- github 'cd /Users/gb/Sandbox/GIT/HUB/'
+abbr -a -- github 'cd ~/GIT/HUB/'
 abbr -a -- gd 'git diff'
 abbr -a -- gp 'git push'
 abbr -a -- gl 'git pull'
