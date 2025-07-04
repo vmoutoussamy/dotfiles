@@ -1,31 +1,82 @@
-function fish_prompt --description 'Write out the prompt'
-    set -l last_status $status
-    set -l normal (set_color black)
-    set -l status_color (set_color brgreen)
-    set -l cwd_color (set_color brblue)
-    set -l vcs_color (set_color brpurple)
-    set -l prompt_status ""
+function fish_prompt
+    # Constants
+    set last_command_status $status
+    set color_normal (set_color --bold normal)
+    set color_secondary (set_color normal)
+    set color_user_default (set_color green)
+    set color_user_root (set_color --bold red)
+    set color_host_default (set_color yellow)
+    set color_host_ssh (set_color red)
+    set color_directory (set_color cyan)
+    set color_status_success (set_color normal)
+    set color_status_error (set_color red)
+    set color_git_background magenta
+    set color_git_detached red
+    set color_git_accent cyan
 
-    # Since we display the prompt on a new line allow the directory names to be longer.
-    set -q fish_prompt_pwd_dir_length
-    or set -lx fish_prompt_pwd_dir_length 0
 
-    # Color the prompt differently when we're root
-    set -l suffix '❯'
-    if functions -q fish_is_root_user; and fish_is_root_user
-        if set -q fish_color_cwd_root
-            set cwd_color (set_color $fish_color_cwd_root)
-        end
-        set suffix '#'
+    # Configuration
+    if test -z "$theme_no_git_indicator"
+        set -g theme_no_git_indicator no
+    end
+    if test -z "$theme_short_path"
+        set -g theme_short_path no
     end
 
-    # Color the prompt in red on error
-    if test $last_status -ne 0
-        set status_color (set_color $fish_color_error)
-        set prompt_status $status_color "[" $last_status "]" $normal
+    # User
+    #if fish_is_root_user
+    #    set color_user $color_user_root
+    #else
+    #    set color_user $color_user_default
+    #end
+    #echo -ns $color_user "$USER" $color_normal $color_secondary "@"
+
+    # Host
+    #if test -n "$SSH_TTY"
+    #    set color_host $color_host_ssh
+    #else
+    #    set color_host $color_host_default
+    #end
+    #echo -ns $color_host (hostname) $color_secondary " "
+
+    # Directory
+    if test "$theme_short_path" = yes
+        set -g fish_prompt_pwd_dir_length 1
+    else
+        set -g fish_prompt_pwd_dir_length 0
+    end
+    echo -ns $color_directory (prompt_pwd)
+    
+    # Git status
+    if not test "$theme_no_git_indicator" = yes
+        set -g __fish_git_prompt_show_informative_status no
+        set -g __fish_git_prompt_showdirtystate yes
+        set -g __fish_git_prompt_showcolorhints yes
+
+        set -g __fish_git_prompt_color $color_git_background
+        set -g __fish_git_prompt_color_branch $color_git_background
+        set -g __fish_git_prompt_color_branch_detached $color_git_detached
+
+        set -g __fish_git_prompt_color_cleanstate $color_git_accent
+        set -g __fish_git_prompt_color_dirtystate $color_git_detached
+
+        set -g __fish_git_prompt_char_cleanstate " ✓"
+        set -g __fish_git_prompt_char_dirtystate "±"
+
+        fish_git_prompt
     end
 
-    #echo -s (prompt_login) ' ' $cwd_color (prompt_pwd) $vcs_color (fish_vcs_prompt) $normal ' ' $prompt_status
-    echo -s ' ' $cwd_color (prompt_pwd) $vcs_color (fish_vcs_prompt) $normal ' ' $prompt_status
-    echo -n -s $status_color $suffix ' ' $normal
+    # Prompt
+    if test $last_command_status -eq 0
+        set color_status $color_status_success
+    else
+        set color_status $color_status_error
+    end
+    if fish_is_root_user
+        set prompt "#"
+    else
+        set prompt "❯"
+    end
+    #echo -nse "\n" $color_status $prompt $color_normal " "
+    echo -nse "\n" $color_user_root $prompt $color_normal " "
 end
